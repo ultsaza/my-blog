@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SHUNSUKEの自己紹介。確率統計、機械学習、Hyprland、クラッシュロワイヤル。">
+    <meta name="color-scheme" content="light">
+    <title>SHUNSUKE</title>
+    <link rel="icon" type="image/gif" href="/raid/assets/profile.gif">
+    <link rel="stylesheet" href="/raid/style.css">
+  </head>
+  <body>
+    <main class="profile">
+      <header class="identity">
+        <img class="avatar" src="/raid/assets/profile.gif" width="168" height="168" alt="星空を背景にした人物のイラスト">
+        <h1>SHUNSUKE</h1>
+      </header>
+
+      <div class="content">
+        <section aria-labelledby="interests-heading">
+          <h2 id="interests-heading">趣味</h2>
+          <ul class="interests">
+            <li>確率統計だったり広く機械学習に興味があります</li>
+            <li>タイル型ウィンドウマネージャー(hyprland) が最近アツいです</li>
+            <li>クラッシュロワイヤルというゲームに熱中していた時期があります</li>
+          </ul>
+        </section>
+
+        <section class="making" aria-labelledby="making-heading">
+          <h2 id="making-heading">今回AIに何をやらせたか</h2>
+          <details class="prompt">
+            <summary>
+              <span class="summary-text">すでに作成していた個人ブログ用のworkflowを流用して、gmailの内容を自動取得させつつAIにwebサイトを実装させました</span>
+              <span class="prompt-toggle"><span class="chevron" aria-hidden="true"></span>クリックして利用したプロンプトを見る</span>
+            </summary>
+            <pre class="prompt-text">⬛︎ このレポジトリでは、push時に自動で ⬛︎ドメインにデプロイされるようなworkflowを組んでいる。新規に、⬛︎というレポジトリを作成して、サブドメインを ⬛︎ とする簡潔な自己紹介サイトを作成してほしい。
+
+自己紹介サイトとしては次のようなものを想定している:
+- 極めて簡潔なSPA: ⬛︎ のようなものを想定している。使用するアイコンについては、~/Downloadにある、n×m.gifのようなファイル名のアイコンgifを用いてほしい
+- 表示する情報は次の通り:
+    - 名前: SHUNSUKE
+    - 趣味:
+        - 確率統計だったり広く機械学習に興味があります
+        - タイル型ウィンドウマネージャー(hyprland) が最近アツいです
+        - クラッシュロワイヤルというゲームに熱中していた時期があります
+    - 今回AIに何をやらせたか:
+        - 次のような折りたたみのウィジェットを作成してください
+            - 見出し: 「すでに作成していた個人ブログ用のworkflowを流用して、gmailの内容を自動取得させつつAIにwebサイトを実装させました 「クリックして利用したプロンプトを見る」」
+            - ウィジェットの中身: 今回のプロンプトのうち、urlやレポジトリ名の部分を⬛︎により伏字にしたもの
+- レイアウトとしては、ページ遷移の存在しない簡潔なものを想定する
+- デザインはすでにあるものを流用すると良い
+- snsの情報などは一切載せないこと
+- その他、詳細な要件は日本トレカセンターからのメールを参照すること</pre>
+          </details>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
