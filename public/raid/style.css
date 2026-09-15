@@ -7,6 +7,7 @@
   --prompt-paper: #f6f8f9;
   --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", Meiryo, sans-serif;
   --name-font: "Helvetica Neue", Arial, sans-serif;
+  --name-size: 24px;
 }
 
 * { box-sizing: border-box; }
@@ -15,7 +16,7 @@ body { margin: 0; overflow-x: clip; font-family: var(--body-font); font-size: 16
 .profile { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 76px; max-width: 1000px; margin: 0 auto; padding: 112px 32px 80px; }
 .identity { min-width: 0; }
 .avatar { display: block; width: 168px; height: 168px; object-fit: cover; border-radius: 50%; }
-h1 { margin: 22px 0 0; font: 700 24px/1.3 var(--name-font); letter-spacing: .025em; overflow-wrap: anywhere; }
+h1 { margin: 22px 0 0; font: 700 var(--name-size)/1.3 var(--name-font); letter-spacing: .025em; overflow-wrap: anywhere; }
 h2 { margin: 0 0 22px; font-size: 21px; font-weight: 650; line-height: 1.5; }
 .content { min-width: 0; padding-top: 1px; }
 .interests { margin: 0; padding-left: 1.2em; }
@@ -23,10 +24,11 @@ h2 { margin: 0 0 22px; font-size: 21px; font-weight: 650; line-height: 1.5; }
 .interests li:last-child { margin-bottom: 0; }
 .interests a { color: var(--accent); text-underline-offset: 3px; }
 .interests a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.making, .message { margin-top: 54px; }
+.making { margin-top: 54px; }
+.message { margin-top: var(--name-size); }
 .making h2, .message h2 { margin-bottom: 18px; }
 .message p { margin: 0; }
-.prompt summary { cursor: pointer; list-style: none; border-radius: 3px; padding-bottom: 24px; }
+.prompt summary { cursor: pointer; list-style: none; border-radius: 3px; }
 .prompt summary::-webkit-details-marker { display: none; }
 .summary-text { display: block; }
 .prompt-toggle { display: flex; align-items: baseline; gap: 10px; margin-top: 18px; color: var(--accent); font-size: 14px; }
@@ -34,23 +36,24 @@ h2 { margin: 0 0 22px; font-size: 21px; font-weight: 650; line-height: 1.5; }
 .prompt[open] .chevron { transform: rotate(135deg); position: relative; top: -2px; }
 .prompt summary:hover .prompt-toggle { text-decoration: underline; text-underline-offset: 4px; }
 .prompt summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
-.prompt-history { margin-top: 26px; }
+.prompt-history { margin-top: var(--name-size); }
 .prompt-history h3 { margin: 28px 0 10px; font-size: 14px; font-weight: 650; line-height: 1.6; }
 .prompt-history h3:first-child { margin-top: 0; }
 .prompt-text { margin: 0; padding: 22px 24px; border-left: 2px solid var(--rule); background: var(--prompt-paper); color: var(--muted); font: 13px/1.95 var(--body-font); white-space: pre-wrap; overflow-wrap: anywhere; }
 @media (max-width: 760px) {
+  :root { --name-size: 23px; }
   .profile { grid-template-columns: minmax(0, 1fr); gap: 44px; max-width: 620px; padding: 48px 24px 64px; }
   .identity { display: flex; align-items: center; gap: 24px; }
   .avatar { width: 96px; height: 96px; }
-  h1 { margin: 0; font-size: 23px; }
+  h1 { margin: 0; }
   h2 { font-size: 20px; margin-bottom: 18px; }
-  .making, .message { margin-top: 40px; }
+  .making { margin-top: 40px; }
   .prompt-text { padding: 18px 16px; }
 }
 @media (max-width: 374px) {
+  :root { --name-size: 21px; }
   .profile { padding-left: 20px; padding-right: 20px; }
   .identity { gap: 18px; }
   .avatar { width: 80px; height: 80px; }
-  h1 { font-size: 21px; }
   .prompt-toggle { font-size: 12px; gap: 8px; }
 }
