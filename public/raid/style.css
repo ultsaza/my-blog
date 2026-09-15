@@ -26,7 +26,7 @@ h2 { margin: 0 0 22px; font-size: 21px; font-weight: 650; line-height: 1.5; }
 .making, .message { margin-top: 54px; }
 .making h2, .message h2 { margin-bottom: 18px; }
 .message p { margin: 0; }
-.prompt summary { cursor: pointer; list-style: none; border-radius: 3px; }
+.prompt summary { cursor: pointer; list-style: none; border-radius: 3px; padding-bottom: 24px; }
 .prompt summary::-webkit-details-marker { display: none; }
 .summary-text { display: block; }
 .prompt-toggle { display: flex; align-items: baseline; gap: 10px; margin-top: 18px; color: var(--accent); font-size: 14px; }
